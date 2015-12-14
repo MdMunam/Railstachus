@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  timeout: 50000
+
+development:
+  <<: *default
+  host: localhost  
+  database: Railstachus
+  username: postgres
+  password: test
+
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+#production:
+ # <<: *default
+  #database: production
+  #username: postgres
+  #password: test
